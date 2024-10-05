@@ -1,0 +1,11 @@
+INSERT INTO personas (nombre, cedula, direccion) VALUES
+('Carlos Perez', '12345678', 'Av. Libertad 123'),
+('Maria Gomez', '87654321', 'Calle Falsa 456'),
+('Ana Suarez', '34567890', 'Av. Siempreviva 789');
+
+INSERT INTO propiedades (direccion_propiedad, tipo, persona_id) VALUES
+('Calle A 11123', 'Alto', 1),
+('Calle B 44456', 'Medio', 1),
+('Calle C 77789', 'Bajo', 2),
+('Calle D 11101', 'Alto', 3),
+('Calle E 22202', 'Bajo', 3);

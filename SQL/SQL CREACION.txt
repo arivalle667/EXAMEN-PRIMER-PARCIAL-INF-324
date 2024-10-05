@@ -1,0 +1,21 @@
+-- Nombre del servidor:localhost
+-- Nombre de usuario: root
+-- Password:
+-- Nombre de la bd: bd_gamlp1
+
+-- Crear tabla 'personas'
+CREATE TABLE personas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    cedula VARCHAR(15) NOT NULL,
+    direccion VARCHAR(255) NOT NULL
+);
+
+-- Crear tabla 'propiedades'
+CREATE TABLE propiedades (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    direccion_propiedad VARCHAR(255) UNIQUE NOT NULL,
+    tipo VARCHAR(50) NOT NULL,
+    persona_id INT,
+    FOREIGN KEY (persona_id) REFERENCES personas(id) ON DELETE CASCADE
+);
